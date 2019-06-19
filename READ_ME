@@ -1,0 +1,22 @@
+RARE_Search is a tool which takes in very specific files. The sequence files used MUST be limited to:
+  A) A header with +++ for sequences on the coding strand and --- for sequences on the non-coding strand
+  B) The sequences must only include the 20k bp upstream of a gene's transcription start site, the gene sequence, and the 20k bp 
+  downstream of the gene
+
+This tool will then search those sequences and return any RARE sequences found (or their reverse compliments), along with where those 
+sequences are relative to upstream or downstream of the transcription start site or end site. 
+The sequences search 20k instead of 10k due to the fact that multiple species came back with similar RARE sites in the high 10k range. 
+This search is limited to 10k in the RARE_Xenopus program.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
+
+
+RARE_Xenopus is slightly more versitile, and could likely be easily configured to search other species for RARE sites. The program takes
+in the Xenbase J-strain v9.2 genome and gene model. Using the gene model, it searches within the 10kb upstream and downstream of the TSS
+and end sites. It then outputs a text file (which can be easily transfered into excel for data manipulation) that has each gene with RARE
+sites. The genes have both the sites and the chromosome coordinates for those sites on the same line. 
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------
